@@ -1,8 +1,23 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Noto_Sans } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import {Header} from "@/components/PageSections/Header/Header";
+import {Footer} from "@/components/PageSections/Footer/Footer";
+config.autoAddCss = false
+
+const notoSans = Noto_Sans({
+  subsets: ['latin'],
+  weight: '700',
+  variable: '--font-noto-sans',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +31,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={notoSans.className + ` flex flex-col min-h-screen`}>
+        <Header/>
+          <div className="flex-grow">
+            {children}
+          </div>
+        <Footer/>
+      </body>
     </html>
   )
 }

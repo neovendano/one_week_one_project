@@ -3,25 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --white: 255, 255, 255;
+  --blue-bg-main: #1b2633;
+  --blue-bg-header: #473168;
+  --purple-main: #a848dc;
+  --gray-white: #F1F2F9;
+  --gray-secondary: #75767F;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--gray-white);
+  background: var(--blue-bg-main);
+
+  font-family: 'Noto Sans', Roboto, sans-serif;
+}
+
+a {
+  color: #54bedb;
+  text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+  transition: text-decoration-color 300ms;
+}
+
+a:hover {
+  text-decoration-color: #54bedb;
+}
+
+main {
+  max-width: inherit;
 }
