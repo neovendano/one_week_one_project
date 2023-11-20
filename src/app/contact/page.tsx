@@ -1,6 +1,4 @@
 import Link from "next/link";
-import {Header} from "@/components/PageSections/Header/Header";
-import {Footer} from "@/components/PageSections/Footer/Footer";
 
 export default function About() {
   return (
