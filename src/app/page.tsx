@@ -1,5 +1,4 @@
 import Link from "next/link";
-import {Header} from "@/components/PageSections/Header/Header";
 
 export default function Home() {
   return (

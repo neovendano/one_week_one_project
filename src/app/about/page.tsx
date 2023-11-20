@@ -1,6 +1,3 @@
-import Link from "next/link";
-import {Header} from "@/components/PageSections/Header/Header";
-
 export default function About() {
   return (
     <main className="flex flex-col items-center px-24 gap-24">
